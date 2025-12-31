@@ -1,7 +1,3 @@
-A professional README is often the first thing a hiring manager or recruiter looks at to judge your communication skills and engineering maturity. Below is a high-quality template specifically tailored for your **99Tech Code Challenge** submission.
-
----
-
 # 🚀 99Tech Frontend Code Challenge
 
 A comprehensive response to the 99Tech Frontend Engineer code challenge, featuring algorithmic problem-solving, a professional currency swap interface, and a deep-dive React refactoring task.
