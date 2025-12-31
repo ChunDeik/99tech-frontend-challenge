@@ -1,8 +1,16 @@
-body {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  min-width: 360px;
-  font-family: Arial, Helvetica, sans-serif;
+/* Custom styles for numeric input to remove arrows */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+/* Subtle focus glow */
+.focus-within\:border-blue-500:focus-within {
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
 }

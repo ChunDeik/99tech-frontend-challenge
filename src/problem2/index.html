@@ -1,27 +1,52 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fancy Form</title>
-
-  <!-- You may add more stuff here -->
-  <link href="style.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fancy Currency Swap</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
+<body class="bg-[#0d1117] text-white min-h-screen flex items-center justify-center p-4">
 
-<body>
+    <div class="w-full max-w-md bg-[#161b22] border border-[#30363d] rounded-2xl p-6 shadow-2xl">
+        <h2 class="text-xl font-semibold mb-6">Swap Assets</h2>
 
-  <!-- You may reorganise the whole HTML, as long as your form achieves the same effect. -->
-  <form onsubmit="return !1">
-    <h5>Swap</h5>
-    <label for="input-amount">Amount to send</label>
-    <input id="input-amount" />
+        <form id="swap-form" class="space-y-4">
+            <div class="bg-[#0d1117] p-4 rounded-xl border border-[#30363d] focus-within:border-blue-500 transition-all">
+                <label class="text-sm text-gray-400">You pay</label>
+                <div class="flex justify-between items-center mt-2">
+                    <input type="number" id="input-amount" placeholder="0.00" step="any" required
+                        class="bg-transparent text-2xl outline-none w-full mr-2">
+                    <select id="from-token" class="bg-[#161b22] border border-[#30363d] rounded-lg px-2 py-1 outline-none text-sm cursor-pointer"></select>
+                </div>
+            </div>
 
-    <label for="output-amount">Amount to receive</label>
-    <input id="output-amount" />
+            <div class="flex justify-center -my-6 relative z-10">
+                <div class="bg-[#161b22] border border-[#30363d] p-2 rounded-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-500"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+                </div>
+            </div>
 
-    <button>CONFIRM SWAP</button>
-  </form>
-  <script src="script.js"></script>
+            <div class="bg-[#0d1117] p-4 rounded-xl border border-[#30363d]">
+                <label class="text-sm text-gray-400">You receive</label>
+                <div class="flex justify-between items-center mt-2">
+                    <input type="text" id="output-amount" placeholder="0.00" readonly
+                        class="bg-transparent text-2xl outline-none w-full mr-2 text-gray-500">
+                    <select id="to-token" class="bg-[#161b22] border border-[#30363d] rounded-lg px-2 py-1 outline-none text-sm cursor-pointer"></select>
+                </div>
+            </div>
+
+            <div id="error-msg" class="text-red-400 text-xs hidden">Please enter a valid amount.</div>
+
+            <button type="submit" id="submit-btn" 
+                class="w-full bg-blue-600 hover:bg-blue-500 py-4 rounded-xl font-bold transition-all flex justify-center items-center">
+                <span id="btn-text">Confirm Swap</span>
+                <div id="btn-loader" class="hidden animate-spin h-5 w-5 border-2 border-white border-t-transparent rounded-full"></div>
+            </button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
 </body>
-
 </html>

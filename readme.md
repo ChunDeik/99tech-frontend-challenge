@@ -1,10 +1,70 @@
-# 99Tech Code Challenge #1 #
+A professional README is often the first thing a hiring manager or recruiter looks at to judge your communication skills and engineering maturity. Below is a high-quality template specifically tailored for your **99Tech Code Challenge** submission.
 
-Note that if you fork this repository, your responses may be publicly linked to this repo.  
-Please submit your application along with the solutions attached or linked.   
+---
 
-It is important that you minimally attempt the problems, even if you do not arrive at a working solution.
+# 🚀 99Tech Frontend Code Challenge
 
-## Submission ##
-You can either provide a link to an online repository, attach the solution in your application, or whichever method you prefer.
-We're cool as long as we can view your solution without any pain.
+A comprehensive response to the 99Tech Frontend Engineer code challenge, featuring algorithmic problem-solving, a professional currency swap interface, and a deep-dive React refactoring task.
+
+## 🛠️ Tech Stack
+
+* **Problem 1 & 2**: Vanilla JavaScript, HTML5, CSS3 (Tailwind CSS via CDN).
+* **Problem 3**: React, TypeScript.
+* **Icons**: Lucide React & Switcheo Token Icons.
+
+---
+
+## 📁 Project Structure
+
+```text
+/
+├── problem1/         # Three ways to sum to n (JavaScript)
+├── problem2/         # Fancy Form: Currency Swap (HTML/JS/Tailwind)
+└── problem3/         # Messy React: Analysis & Refactored Solution (TSX)
+
+```
+
+---
+
+## 📝 Solution Overview
+
+### **Problem 1: Three Ways to Sum to N**
+
+Provided three unique JavaScript implementations:
+
+1. **Iterative**: Standard loop for readability.
+2. **Mathematical**: Gauss's formula for  efficiency.
+3. **Recursive**: Functional approach (noted with recursion depth limits).
+
+### **Problem 2: Fancy Form (Currency Swap)**
+
+A professional DeFi-style swap interface.
+
+* **Key Features**: Real-time exchange rate calculation, token filtering (omitting tokens without prices), and a simulated backend loading state.
+* **Validation**: Interactive error handling for invalid amounts.
+
+### **Problem 3: Messy React Refactoring**
+
+Identified and resolved several critical "code smells":
+
+* **Bug Fixes**: Corrected the `lhsPriority` undefined variable and fixed the filtering logic that was inadvertently hiding valid balances.
+* **Performance**: Optimized `useMemo` by removing unnecessary dependencies (`prices`) to prevent redundant re-renders.
+* **Type Safety**: Introduced a robust `WalletBalance` interface and eliminated `any` types to leverage TypeScript's full power.
+
+---
+
+## ⚙️ Installation & Usage
+
+### **Run Problem 2 (Fancy Form)**
+
+Simply open `problem2/index.html` in any modern browser. It uses the Tailwind CDN, so no local build step is required.
+
+### **Run Problem 3 (React)**
+
+If you used the Vite template provided earlier:
+
+1. `cd problem3`
+2. `npm install`
+3. `npm run dev`
+
+---
